@@ -1,0 +1,50 @@
+.navbar {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  margin: auto;
+  justify-content: space-between;
+  .centerBar {
+    flex-grow: 2;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+  }
+  .leftBar {
+    width: 33%;
+    color: #bf9270;
+    display: flex;
+    gap: 15px;
+    & p {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+  .header {
+    color: #224439;
+    letter-spacing: 0.35em;
+    color: #bf9270;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .rightBar {
+    display: flex;
+    width: 31%;
+    align-items: center;
+    color: #bf9270;
+    justify-content: flex-end;
+    gap: 15px;
+    & p {
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+}
