@@ -6,6 +6,7 @@ import AboutMe from "./Pages/AboutMe/AboutMe";
 import NavBar from "./Components/Navbar/Navbar";
 import Products from "./Pages/Products/Products";
 import Collections from "./Pages/Collections/Collections";
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <div className={styles.appContainer}>
@@ -18,7 +19,7 @@ function App() {
           <Route path="/ürünler" element={<Products />} />
           <Route path="/koleksiyonlar" element={<Collections />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   );

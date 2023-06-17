@@ -3,9 +3,8 @@ import styles from "./Navbar.module.scss";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaWindowClose } from "react-icons/fa";
-import { MdOutlineGirl, MdCollectionsBookmark } from "react-icons/md";
-import { TbArrowRoundaboutRight } from "react-icons/tb";
 import { useState } from "react";
+import classNames from "classnames";
 const NavBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   console.log(showMobileMenu);
@@ -50,16 +49,20 @@ const NavBar = () => {
                 >
                   <FaWindowClose color="#DBA39A" size={22} />
                 </div>
+                <p className={classNames(styles.mobileHeader, styles.header)}>
+                  Moon Dreamers
+                </p>
                 <div className={styles.mobileNavItems}>
                   <Link className={styles.link} to={"/ürünler"}>
-                    Ürünler <MdOutlineGirl size={30} />
+                    Ürünler
                   </Link>
                   <Link className={styles.link} to={"/koleksiyonlar"}>
-                    Koleksiyon <MdCollectionsBookmark size={20} />
+                    Koleksiyon
                   </Link>
                   <Link className={styles.link} to={"/hakkımızda"}>
-                    Hakkımızda <TbArrowRoundaboutRight size={20} />
+                    Hakkımızda
                   </Link>
+                  <Link className={styles.link}>EN | TR</Link>
                 </div>
               </div>
             </div>
