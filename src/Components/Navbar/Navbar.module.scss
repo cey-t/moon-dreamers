@@ -37,7 +37,6 @@
     }
   }
   .header {
-    color: #224439;
     letter-spacing: 0.35em;
     color: #bf9270;
     text-transform: uppercase;
@@ -60,7 +59,6 @@
       line-height: 20px;
     }
   }
-  .mobileNavbarContainer,
   .mobileNavRoot {
     display: none;
   }
@@ -74,9 +72,7 @@
     .mobileNavbarContainer {
       display: contents;
     }
-    .mobileNavRoot {
-      display: block;
-    }
+
     .centerBar {
       width: 0;
     }
@@ -94,6 +90,7 @@
       width: 100%;
       top: 0;
       left: 0;
+      display: block;
       background-color: rgba(219, 163, 154, 0.6);
     }
     .navBoxes {
@@ -106,7 +103,6 @@
     .mobileNav {
       z-index: 3;
       position: absolute;
-      top: 77px;
       height: 80%;
       width: 30%;
       background-color: #f5ebe0;
@@ -121,7 +117,6 @@
       display: flex;
       height: 50%;
       flex-direction: column;
-      // justify-content: space-between;
       gap: 20px;
       padding: 10px;
       .link {
