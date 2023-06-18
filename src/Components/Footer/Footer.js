@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./Footer.module.scss";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
-import { WiMoonWaningCrescent5 } from "react-icons/wi";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 const Footer = () => {
   return (
@@ -27,11 +27,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <WiMoonWaningCrescent5
-            size={40}
-            color="#555"
-            style={{ marginTop: "10px" }}
-          />
+          <LanguageSwitcher />
         </div>
         <div>
           <p className={styles.footerChildHeader}>Sosyal Medya</p>
