@@ -30,12 +30,17 @@
     display: flex;
     color: #555;
     gap: 20px;
-    margin-bottom: 20px;
     text-decoration: none;
+    margin-bottom: 5px;
     transition: color 0.9s;
     &:hover {
       color: #224439;
     }
+  }
+  .footerNav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
   .socialMedia {
     display: flex;
@@ -54,20 +59,23 @@
 }
 @media screen and (max-width: 582px) {
   .footerRoot {
-    padding: 10px 0;
+    padding: 15px 0;
     .header {
       letter-spacing: 0.15em;
       font-weight: 800;
-      font-size: 15px;
-      line-height: 25px;
+      font-size: 12px;
+      line-height: 10px;
     }
     .link {
-      font-size: 12px;
-      margin: 10px;
-      gap: 5px;
+      font-size: 10px;
     }
     .footerContainer {
       padding: 0;
+      width: 90%;
+    }
+    .footerChildHeader {
+      font-size: 12px;
+      line-height: 15px;
     }
   }
 }
