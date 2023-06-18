@@ -11,17 +11,19 @@ const Footer = () => {
         <p className={styles.header}>Moon Dreamers</p>
       </div>
       <div className={styles.footerContainer}>
-        <div>
+        <div className={styles.footerNav}>
           <p className={styles.footerChildHeader}>Navigasyon</p>
-          <Link className={styles.link} to={"/ürünler"}>
-            Ürünler
-          </Link>
-          <Link className={styles.link} to={"/koleksiyonlar"}>
-            Koleksiyon
-          </Link>
-          <Link className={styles.link} to={"/hakkımızda"}>
-            Hakkımızda
-          </Link>
+          <div className={styles.navItems}>
+            <Link className={styles.link} to={"/ürünler"}>
+              Ürünler
+            </Link>
+            <Link className={styles.link} to={"/koleksiyonlar"}>
+              Koleksiyon
+            </Link>
+            <Link className={styles.link} to={"/hakkımızda"}>
+              Hakkımızda
+            </Link>
+          </div>
         </div>
 
         <div>
