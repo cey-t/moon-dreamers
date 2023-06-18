@@ -5,9 +5,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaWindowClose } from "react-icons/fa";
 import { useState } from "react";
 import classNames from "classnames";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 const NavBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  console.log(showMobileMenu);
   return (
     <div className={styles.navbar}>
       <div className={styles.desktopNavbar}>
@@ -62,7 +62,7 @@ const NavBar = () => {
                   <Link className={styles.link} to={"/hakkımızda"}>
                     Hakkımızda
                   </Link>
-                  <Link className={styles.link}>EN | TR</Link>
+                  <LanguageSwitcher />
                 </div>
               </div>
             </div>
