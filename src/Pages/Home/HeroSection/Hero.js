@@ -1,17 +1,32 @@
 import styles from "./Hero.module.scss";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+
 const Hero = () => {
   const { t } = useTranslation("common");
+
+  useEffect(() => {
+    const heroText = document.querySelector(`.${styles.heroText}`);
+    const text = heroText.textContent;
+    heroText.textContent = "";
+
+    for (let i = 0; i < text.length; i++) {
+      const span = document.createElement("span");
+      span.textContent = text[i];
+      span.style.animationDelay = `${0.1 * i}s`;
+      heroText.appendChild(span);
+    }
+  }, []);
+
   return (
     <section className={styles.heroSection}>
       <div className={styles.profil}>
-        <div>
-          <p className={styles.text}>
-            ~Özgünlüğünüzü kabul edin.. {t("what.ever")}
-          </p>
-        </div>
+        <section className={styles.hero}>
+          <p className={styles.heroText}>Hello Beautiful</p>
+        </section>
       </div>
     </section>
   );
 };
+
 export default Hero;
