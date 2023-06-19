@@ -4,9 +4,11 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaWindowClose } from "react-icons/fa";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import classNames from "classnames";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 const NavBar = () => {
+  const { t } = useTranslation("common");
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
     <div className={styles.navbar}>
@@ -22,20 +24,20 @@ const NavBar = () => {
 
         <div className={styles.leftBar}>
           <Link className={styles.link} to={"/ürünler"}>
-            Ürünler
+            {t("products")}
           </Link>
           <Link className={styles.link} to={"/koleksiyonlar"}>
-            Koleksiyon
+            {t("collection")}
           </Link>
           <Link className={styles.link} to={"/hakkımızda"}>
-            Hakkımızda
+            {t("about.us")}
           </Link>
         </div>
         <div className={styles.centerBar}>
           <p className={styles.header}>Moon Dreamers</p>
         </div>
         <div className={styles.rightBar}>
-          <p> Hesap </p>
+          <p> {t("account")} </p>
           <AiOutlineShoppingCart size={22} color="#bf9270" cursor={"pointer"} />
         </div>
 
@@ -54,13 +56,13 @@ const NavBar = () => {
                 </p>
                 <div className={styles.mobileNavItems}>
                   <Link className={styles.link} to={"/ürünler"}>
-                    Ürünler
+                    {t("products")}
                   </Link>
                   <Link className={styles.link} to={"/koleksiyonlar"}>
-                    Koleksiyon
+                    {t("collection")}
                   </Link>
                   <Link className={styles.link} to={"/hakkımızda"}>
-                    Hakkımızda
+                    {t("about.us")}
                   </Link>
                   <LanguageSwitcher />
                 </div>

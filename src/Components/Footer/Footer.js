@@ -3,8 +3,9 @@ import styles from "./Footer.module.scss";
 import { BsInstagram } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-
+import { useTranslation } from "react-i18next";
 const Footer = () => {
+  const { t } = useTranslation("common");
   return (
     <section className={styles.footerRoot}>
       <div>
@@ -12,16 +13,16 @@ const Footer = () => {
       </div>
       <div className={styles.footerContainer}>
         <div className={styles.footerNav}>
-          <p className={styles.footerChildHeader}>Navigasyon</p>
+          <p className={styles.footerChildHeader}>{t("navigation")}</p>
           <div className={styles.navItems}>
             <Link className={styles.link} to={"/ürünler"}>
-              Ürünler
+              {t("products")}
             </Link>
             <Link className={styles.link} to={"/koleksiyonlar"}>
-              Koleksiyon
+              {t("collection")}
             </Link>
             <Link className={styles.link} to={"/hakkımızda"}>
-              Hakkımızda
+              {t("about.us")}
             </Link>
           </div>
         </div>
@@ -30,7 +31,7 @@ const Footer = () => {
           <LanguageSwitcher />
         </div>
         <div>
-          <p className={styles.footerChildHeader}>Sosyal Medya</p>
+          <p className={styles.footerChildHeader}>{t("social.media")}</p>
           <div className={styles.socialMedia}>
             <a
               className={styles.link}
