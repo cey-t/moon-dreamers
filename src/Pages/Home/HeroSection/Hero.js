@@ -1,10 +1,7 @@
 import styles from "./Hero.module.scss";
-import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 
 const Hero = () => {
-  const { t } = useTranslation("common");
-
   useEffect(() => {
     const heroText = document.querySelector(`.${styles.heroText}`);
     const text = heroText.textContent;
