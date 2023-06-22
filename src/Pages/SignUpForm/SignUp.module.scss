@@ -1,0 +1,45 @@
+.loginContainer {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.loginForm {
+  margin: auto;
+}
+
+.input {
+  height: 20px;
+  padding: 10px 13px;
+  border: none;
+  font-size: 14px;
+  width: 420px;
+  outline: none;
+  border: 1px solid #dba39a;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  align-self: center;
+}
+.submit {
+  border-radius: 10px;
+  height: 37px;
+  padding: 8px 0px;
+  border: none;
+  background-color: #dba39a;
+  cursor: pointer;
+  width: 100%;
+}
+
+.registerText {
+  font-size: 14px;
+  margin: 0;
+  .link {
+    margin-left: 6px;
+    color: black;
+  }
+}

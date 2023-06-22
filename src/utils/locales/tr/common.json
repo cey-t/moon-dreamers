@@ -5,5 +5,12 @@
   "about.us": "Hakkımızda",
   "navigation": "Navigasyon",
   "social.media": "Sosyal Medya",
-  "account": "Hesap"
+  "account": "Hesap",
+  "signup": "Kayıt Ol",
+  "still.register": "Halen kayıt olmadınız mı?",
+  "login": "Giriş Yap",
+  "password": "Şifre",
+  "turn.login": "Zaten üye misin?",
+  "name": "Isim",
+  "surname": "Soyisim"
 }
