@@ -12,5 +12,7 @@
   "password": "Şifre",
   "turn.login": "Zaten üye misin?",
   "name": "Isim",
-  "surname": "Soyisim"
+  "surname": "Soyisim",
+  "invalidCredentialsError": "Geçersiz E-posta veya Parola",
+  "error": "Hata"
 }

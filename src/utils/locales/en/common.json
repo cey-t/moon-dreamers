@@ -12,5 +12,7 @@
   "password": "Password",
   "turn.login": "Already member?",
   "name": "Name",
-  "surname": "Surname"
+  "surname": "Surname",
+  "invalidCredentialsError": "Incorrect Email or Password",
+  "error": "Error"
 }

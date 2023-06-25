@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import styles from "./Login.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { notification } from "antd";
 import { useTranslation } from "react-i18next";
+import Authentication from "../../services/Authentication";
+let auth = new Authentication();
 const Login = () => {
+  let navigate = useNavigate();
   const { t } = useTranslation("common");
   const [loginForm, setLoginForm] = useState({
     email: "",
@@ -16,22 +20,31 @@ const Login = () => {
       [name]: value,
     }));
   };
-
-  const handleSubmit = (event) => {
+  const handleLogin = (event) => {
     event.preventDefault();
-    console.log("Form submitted:", loginForm.name, loginForm.surname);
-    setLoginForm({ name: "", surname: "" });
+    auth
+      .postLogin({ email: loginForm?.email, password: loginForm?.password })
+      .then(() => {
+        navigate("/");
+      })
+      .catch((err) => {
+        notification.error({
+          message: t("error"),
+          description: t("invalidCredentialsError"),
+        });
+        console.log(err);
+      });
   };
 
   return (
     <div className={styles.loginContainer}>
-      <form className={styles.loginForm} onSubmit={handleSubmit}>
+      <form className={styles.loginForm} onSubmit={handleLogin}>
         <div className={styles.inputContainer}>
           <div className={styles.inputContainer}>
             <input
               type="email"
               placeholder="Email"
-              name="name"
+              name="email"
               onChange={handleChange}
               className={styles.input}
               value={loginForm.email}
@@ -42,7 +55,7 @@ const Login = () => {
             <input
               type="password"
               placeholder={t("password")}
-              name="surname"
+              name="password"
               className={styles.input}
               onChange={handleChange}
               value={loginForm.password}

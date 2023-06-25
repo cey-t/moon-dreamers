@@ -21,7 +21,6 @@ const SignUp = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Form submitted:", loginForm.name, loginForm.surname);
     setLoginForm({ name: "", surname: "" });
   };
 
