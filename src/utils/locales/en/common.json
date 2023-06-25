@@ -5,5 +5,14 @@
   "about.us": "About Us",
   "navigation": "Navigation",
   "social.media": "Social Media",
-  "account": "Account"
+  "account": "Account",
+  "signup": "Sign Up",
+  "still.register": "Not registered yet?",
+  "login": "Login",
+  "password": "Password",
+  "turn.login": "Already member?",
+  "name": "Name",
+  "surname": "Surname",
+  "invalidCredentialsError": "Incorrect Email or Password",
+  "error": "Error"
 }

@@ -34,10 +34,14 @@ const NavBar = () => {
           </Link>
         </div>
         <div className={styles.centerBar}>
-          <p className={styles.header}>Moon Dreamers</p>
+          <Link to={"/"} className={styles.header}>
+            <p className={styles.header}>Moon Dreamers</p>
+          </Link>
         </div>
         <div className={styles.rightBar}>
-          <p> {t("account")} </p>
+          <Link to={"/login"} className={styles.link}>
+            <p> {t("account")} </p>
+          </Link>
           <AiOutlineShoppingCart size={22} color="#bf9270" cursor={"pointer"} />
         </div>
 
